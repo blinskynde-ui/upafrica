@@ -17,6 +17,16 @@ export default {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
       },
+      animation: {
+        'spin-slow': 'spin 10s linear infinite',
+        'reverse-spin': 'reverse-spin 15s linear infinite',
+      },
+      keyframes: {
+        'reverse-spin': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(-360deg)' },
+        }
+      }
     },
   },
   plugins: [],
