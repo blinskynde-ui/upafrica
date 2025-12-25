@@ -7,15 +7,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        'up-blue': '#0a192f',
-        'up-dark': '#020c1b',
-        'up-neon': '#64ffda',
-        'up-light-blue': '#112240',
-        'up-text': '#8892b0',
-        'up-white': '#e6f1ff',
+        'up-dark': '#0a0f1c', // Deep blue/black background
+        'up-card': '#111827', // Slightly lighter for cards
+        'up-neon-blue': '#00f0ff', // Cyan
+        'up-neon-orange': '#ff4d00', // Orange
+        'up-text-main': '#e2e8f0', // Light gray/white text
+        'up-text-muted': '#94a3b8', // Muted text
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'sans-serif'],
       },
     },
   },
