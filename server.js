@@ -3,6 +3,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path');
+const nodemailer = require('nodemailer');
 
 const app = express();
 const PORT = 8080;
@@ -18,10 +19,43 @@ if (!fs.existsSync(WAITLIST_FILE)) {
     fs.writeFileSync(WAITLIST_FILE, '[]');
 }
 
+// Configure Nodemailer
+// NOTE: For production, replace these with real SMTP credentials.
+// We default to Ethereal (fake SMTP) for demonstration if env vars are missing.
+const createTransporter = async () => {
+    if (process.env.SMTP_HOST) {
+        return nodemailer.createTransport({
+            host: process.env.SMTP_HOST,
+            port: process.env.SMTP_PORT || 587,
+            secure: process.env.SMTP_SECURE === 'true',
+            auth: {
+                user: process.env.SMTP_USER,
+                pass: process.env.SMTP_PASS,
+            },
+        });
+    } else {
+        // Create a test account on Ethereal
+        const testAccount = await nodemailer.createTestAccount();
+        console.log('Ethereal Email Test Account Created:', testAccount.user);
+        return nodemailer.createTransport({
+            host: 'smtp.ethereal.email',
+            port: 587,
+            secure: false,
+            auth: {
+                user: testAccount.user,
+                pass: testAccount.pass,
+            },
+        });
+    }
+};
+
+let transporterPromise = createTransporter();
+
+
 // --- API Endpoints ---
 
 // 3. Join Waitlist
-app.post('/api/join', (req, res) => {
+app.post('/api/join', async (req, res) => {
     try {
         const { email } = req.body;
 
@@ -37,15 +71,10 @@ app.post('/api/join', (req, res) => {
             }
         } catch (err) {
             console.error("Error reading waitlist:", err);
-            // If the file is corrupted, we log it and return error
-            // Alternatively, we could reset the file, but that might lose data.
-            // Safer to just error out.
             return res.status(500).json({ error: 'Internal server error: Database corruption' });
         }
 
         if (!Array.isArray(list)) {
-             // If valid JSON but not array, treat as empty or error?
-             // Treat as empty but log warning
              console.warn("Waitlist file is not an array, resetting in memory.");
              list = [];
         }
@@ -56,6 +85,28 @@ app.post('/api/join', (req, res) => {
 
         list.push(email);
         fs.writeFileSync(WAITLIST_FILE, JSON.stringify(list, null, 2));
+
+        // Send Welcome Email
+        try {
+            const transporter = await transporterPromise;
+            const info = await transporter.sendMail({
+                from: '"Unifrix Info" <info@unifrix.online>', // sender address
+                to: email, // list of receivers
+                subject: "Welcome to the Unifrix Revolution", // Subject line
+                text: "Thank you for joining the Unifrix waitlist. We are excited to have you on board. We will verify your credentials and get back to you shortly.", // plain text body
+                html: "<b>Thank you for joining the Unifrix waitlist.</b><br>We are excited to have you on board. We will verify your credentials and get back to you shortly.", // html body
+            });
+
+            console.log("Message sent: %s", info.messageId);
+            // If using Ethereal, log the preview URL
+            if (nodemailer.getTestMessageUrl(info)) {
+                console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+            }
+
+        } catch (emailErr) {
+            console.error("Failed to send email:", emailErr);
+            // We do NOT fail the request if email fails, but we log it.
+        }
 
         // Simulate network delay
         setTimeout(() => {
