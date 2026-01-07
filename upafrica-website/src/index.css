@@ -4,6 +4,6 @@
 
 @layer base {
   body {
-    @apply bg-up-dark text-up-text font-sans antialiased;
+    @apply bg-up-dark text-up-text-main font-sans antialiased;
   }
 }
