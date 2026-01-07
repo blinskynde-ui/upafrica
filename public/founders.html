@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Founders | Unifrix</title>
+    <meta name="description" content="Meet the team behind Unifrix - The Financial Memory of Africa.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .founders-container {
+            max-width: 900px;
+            margin: 150px auto 80px;
+            padding: 0 2rem;
+        }
+
+        .founder-card {
+            display: flex;
+            align-items: center;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 40px;
+            backdrop-filter: blur(10px);
+            gap: 40px;
+            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.05);
+        }
+
+        .founder-img {
+            width: 250px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 12px;
+            filter: grayscale(100%);
+            border: 1px solid var(--glass-border);
+        }
+
+        .founder-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+
+        .founder-role {
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .founder-bio {
+            color: #ccc;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            font-size: 1.05rem;
+        }
+
+        .founder-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 10px 20px;
+            border: 1px solid var(--glass-border);
+            border-radius: 50px;
+            transition: var(--transition);
+        }
+
+        .contact-link:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        @media (max-width: 768px) {
+            .founder-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .founder-img {
+                width: 100%;
+                max-width: 300px;
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cursor-glow"></div>
+
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">UNIFRIX</a>
+            <div class="nav-links">
+                <a href="index.html#vision">Vision</a>
+                <a href="whitepaper.html">White Paper</a>
+                <a href="founders.html" class="active-link">Founders</a>
+                <a href="index.html#contact" class="btn-primary">Connect</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container founders-container">
+        <div class="founder-card">
+            <img src="dennis_ndegwa.jpg" alt="Dennis Ndegwa" class="founder-img">
+            <div class="founder-info">
+                <h2>Dennis Ndegwa</h2>
+                <div class="founder-role">Founder</div>
+                <p class="founder-bio">
+                    Dennis is a 20-year-old innovator currently pursuing Cyber Security. Driven by a passion for
+                    transparent financial systems, he is building Unifrix to digitize and secure the financial history
+                    of African markets. His work bridges the gap between historical market data and modern cybersecurity
+                    principles.
+                </p>
+                <div class="founder-links">
+                    <a href="mailto:dennis@unifrix.online" class="contact-link">
+                        <i class="fas fa-envelope"></i> dennis@unifrix.online
+                    </a>
+                    <a href="https://x.com/_Dennis_Njuguna" target="_blank" class="contact-link">
+                        <i class="fab fa-x-twitter"></i> @_Dennis_Njuguna
+                    </a>
+                    <a href="https://instagram.com/_NDEGWA_NJUGUNA_" target="_blank" class="contact-link">
+                        <i class="fab fa-instagram"></i> @_NDEGWA_NJUGUNA_
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unifrix | Transforming African Financial Ecosystems</title>
+    <meta name="description"
+        content="Unifrix is at the R&D stage, integrating African stock exchanges with data to create a unique investment landscape for investors and retail personas.">
+
+    <!-- Google Fonts: Outfit for a modern, sleek look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="cursor-glow"></div>
+
+
+
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">UNIFRIX</a>
+            <div class="nav-links">
+                <a href="#vision">Vision</a>
+                <a href="whitepaper.html">White Paper</a>
+                <a href="founders.html">Founders</a>
+                <a href="#about">R&D</a>
+                <a href="#contact" class="btn-primary">Connect</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="reveal-text">Building the <span>Financial Memory</span> of Africa</h1>
+                <p class="reveal-text-slow">Creating a transparent ecosystem where every investment decision is guided
+                    by the complete truth of the past.</p>
+                <div class="hero-btns">
+                    <a href="#vision" class="btn-primary">Our Vision</a>
+                    <a href="#about" class="btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="visual-blob"></div>
+                <!-- Interactive Map Container -->
+                <!-- Spinning Globe Container -->
+                <div id="globe-container" class="globe-container">
+                    <canvas id="globe-canvas"></canvas>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="vision" class="vision">
+        <div class="container">
+            <div class="section-tag">Our North Star</div>
+            <h2>Truth, Trust, and <span>Capital</span></h2>
+            <div class="vision-grid">
+                <div class="vision-card">
+                    <i class="fas fa-history"></i>
+                    <h3>The End of "Survivorship Bias"</h3>
+                    <p>A world where failure is studied, not deleted. We preserve the full history to reveal the
+                        complete market reality.</p>
+                </div>
+                <div class="vision-card">
+                    <i class="fas fa-balance-scale"></i>
+                    <h3>Accountability as an Asset Class</h3>
+                    <p>A market where leadership history is as visible as stock price. Governance becomes a tradeable
+                        metric.</p>
+                </div>
+                <div class="vision-card">
+                    <i class="fas fa-globe-africa"></i>
+                    <h3>The Pan-African Standard</h3>
+                    <p>One interface for a continent of opportunity. Unifying fragmented markets into a single,
+                        accessible ecosystem.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-flex">
+                <div class="about-text">
+                    <div class="section-tag">Our Mission</div>
+                    <h2>The <span>Complete Truth</span></h2>
+                    <p>To aggregate, preserve, and contextualize the <strong>entire financial history</strong> of
+                        African markets—from the giants of today to the failures of yesterday.</p>
+                    <div class="section-tag">Current Stage</div>
+                    <h2>Data Aggregation & <span>Schema Validation</span></h2>
+                    <p>We are currently securing the historical datasets (IPOs, Delisted entities) and designing the
+                        proprietary database structure that links corporate governance events to financial performance.
+                    </p>
+                    <p><strong>We are building the data infrastructure before building the UI.</strong> Unifrix is
+                        laying the groundwork for a transparent ecosystem.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#" class="logo">UNIFRIX</a>
+                    <p>Pioneering the future of African financial markets.</p>
+                </div>
+                <div class="footer-connect">
+                    <h3>Join the Revolution</h3>
+                    <form id="waitlist-form" class="connect-form">
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your Work Email" required>
+                            <button type="submit" class="btn-submit"><i class="fas fa-arrow-right"></i></button>
+                        </div>
+                        <div class="form-message"></div>
+                    </form>
+
+                    <div class="social-connect-links" style="margin-top: 1.5rem;">
+                        <a href="https://linkedin.com/company/unifrix" target="_blank" aria-label="LinkedIn"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="mailto:info@unifrix.online" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Unifrix. All rights reserved.</p>
+                <p>Company in R&D Stage.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="globe.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

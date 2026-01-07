@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White Paper | Unifrix</title>
+    <meta name="description"
+        content="Unifrix White Paper: Overcoming Survivorship Bias and Quantifying Governance in Emerging Markets.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .white-paper-container {
+            max-width: 900px;
+            margin: 120px auto 80px;
+            padding: 40px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            backdrop-filter: blur(10px);
+        }
+
+        .white-paper-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .white-paper-content h2 {
+            font-size: 1.8rem;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 0.5rem;
+        }
+
+        .white-paper-content h3 {
+            font-size: 1.4rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .white-paper-content p {
+            margin-bottom: 1.2rem;
+            color: #ccc;
+        }
+
+        .white-paper-content ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+            color: #ccc;
+        }
+
+        .white-paper-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .meta-info {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+            margin-bottom: 3rem;
+            border-left: 2px solid var(--primary-color);
+            padding-left: 1rem;
+        }
+
+        .math-block {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            text-align: center;
+            border-radius: 8px;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 2rem 0;
+            font-size: 1.2rem;
+        }
+
+        .reference-list {
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cursor-glow"></div>
+
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">UNIFRIX</a>
+            <div class="nav-links">
+                <a href="index.html#vision">Vision</a>
+                <a href="whitepaper.html">White Paper</a>
+                <a href="founders.html">Founders</a>
+                <a href="index.html#about">R&D</a>
+                <a href="index.html#contact" class="btn-primary">Connect</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <article class="white-paper-container white-paper-content">
+            <h1>UNIFRIX: The Financial Memory of Africa</h1>
+            <p style="font-size: 1.2rem; color: var(--primary-color);">Overcoming Survivorship Bias and Quantifying
+                Governance in Emerging Markets</p>
+
+            <div class="meta-info">
+                <p><strong>Version:</strong> 1.0<br>
+                    <strong>Date:</strong> December 2025<br>
+                    <strong>Status:</strong> Public Draft
+                </p>
+            </div>
+
+            <h2>Executive Summary</h2>
+            <p>The African capital market ecosystem is currently plagued by a critical data deficiency:
+                <strong>Survivorship Bias</strong>. Standard data providers primarily index active, successful
+                companies, systematically excising "delisted" or "failed" entities from historical records. This
+                fragmentation creates a distorted view of market risk and denies investors the ability to perform
+                longitudinal risk modeling.</p>
+            <p>Unifrix is a financial intelligence platform designed to aggregate, preserve, and contextualize the
+                complete history of African securities exchanges, commencing with the Nairobi Securities Exchange (NSE).
+                By integrating "Graveyard Data" (delisted entities) with a proprietary Governance-Adjusted Analysis
+                Engine, Unifrix transforms raw financial data into accountability metrics. We enable investors to
+                isolate the impact of leadership tenure on financial performance, turning corporate governance from a
+                qualitative buzzword into a quantitative asset class.</p>
+
+            <h2>1. The Problem: Asymmetric Information and Data Amnesia</h2>
+            <h3>1.1 The "Graveyard" Gap</h3>
+            <p>In mature markets (e.g., NYSE, LSE), historical data is immutable. In emerging markets, data is often
+                ephemeral. When a company delists due to insolvency, merger, or regulatory non-compliance, its digital
+                footprint often vanishes.</p>
+            <p>For the Nairobi Securities Exchange (NSE), a significant percentage of listed entities have exited the
+                market over the last two decades. By removing these entities from datasets, current analytical models
+                suffer from Survivorship Bias—the logical error of concentrating on the people or things that made it
+                past some selection process and overlooking those that did not, typically because of their lack of
+                visibility (Brown, Goetzmann, Ibbotson, & Ross, 1992).</p>
+
+            <h3>1.2 The Context Void</h3>
+            <p>Current market data is "flat." It provides the what (e.g., "Net Profit dropped 40%") but lacks the why.
+                Without linking financial outputs to specific corporate actions (e.g., specific CEO tenures, debt-fueled
+                expansion projects, or board restructuring), investors cannot distinguish between market-driven
+                volatility and governance-driven value destruction.</p>
+
+            <h2>2. The Unifrix Solution</h2>
+            <p>Unifrix operates on two primary value pillars: Deep Archival Preservation and Contextual Intelligence.
+            </p>
+
+            <h3>2.1 The Unified Archive (The "Time Machine")</h3>
+            <p>Unifrix is constructing the first comprehensive digital archive of the NSE, aggregating data not just for
+                active blue-chip companies, but for the "fallen giants."</p>
+            <ul>
+                <li><strong>Scope:</strong> IPO filings, Annual Reports, and cautionary announcements from 1990 to
+                    present.</li>
+                <li><strong>Inclusion:</strong> Active, Suspended, and Delisted entities.</li>
+                <li><strong>Value:</strong> This allows for "stress testing" investment models against actual historical
+                    failure scenarios, rather than theoretical simulations.</li>
+            </ul>
+
+            <h3>2.2 The Governance-Adjusted Analysis Engine</h3>
+            <p>Unifrix introduces a novel analytical framework: Event-Based Attribution. Instead of querying data purely
+                by fiscal year, our engine queries data by Leadership Tenure.</p>
+
+            <p><strong>The Algorithm:</strong></p>
+            <div class="math-block">
+                P<sub>ceo</sub> = &Delta;(EBITDA, Debt, AssetBase) / (T<sub>end</sub> - T<sub>start</sub>)
+            </div>
+            <p>Where P<sub>ceo</sub> represents the performance coefficient of a specific leader. This allows the
+                platform to generate "Accountability Reports" that answer questions such as:</p>
+            <ul>
+                <li>"What was the rate of debt accumulation under CEO X vs. CEO Y?"</li>
+                <li>"Did the dividend decline correlate with a verifiable asset acquisition or operational cash burn?"
+                </li>
+            </ul>
+
+            <h2>3. Case Study: The Cost of Ignorance</h2>
+            <p>Hypothetical retroactive analysis based on historical NSE market events.</p>
+            <p>Consider a manufacturing entity "Company M" that was listed on the NSE and subsequently entered
+                receivership.</p>
+            <ul>
+                <li><strong>Traditional Data View:</strong> Shows a sharp decline in share price in the final 2 years
+                    before suspension. The investor reacts too late.</li>
+                <li><strong>The Unifrix View:</strong> By analyzing the "Graveyard Data" from 5 years prior, Unifrix
+                    highlights a divergence event:</li>
+            </ul>
+            <p><strong>Event:</strong> Change in Management.<br>
+                <strong>Data Signal:</strong> Rapid increase in Short-Term Borrowing combined with a stagnation in
+                Revenue immediately following the new tenure.<br>
+                <strong>Governance Insight:</strong> The AI Engine flags this specific tenure as "High Risk" based on
+                historical patterns of similar delisted entities.
+            </p>
+            <p>This context provides the Alpha (market edge) necessary to exit positions before public collapse.</p>
+
+            <h2>4. Technical Architecture</h2>
+            <p>Unifrix utilizes a RAG (Retrieval-Augmented Generation) architecture to ensure accuracy and trust.</p>
+            <ul>
+                <li><strong>Ingestion Layer:</strong> Optical Character Recognition (OCR) digitization of physical/PDF
+                    annual reports.</li>
+                <li><strong>Structuring Layer:</strong> Conversion of unstructured text (Chairman's Statements) and
+                    structured tables (Balance Sheets) into a relational database.</li>
+                <li><strong>Semantic Layer:</strong> The "Why" Engine. AI agents cross-reference quantitative drops with
+                    qualitative explanations found in the "Notes to Financial Statements," providing citations for every
+                    insight.</li>
+            </ul>
+
+            <h2>5. Market Opportunity & Roadmap</h2>
+            <h3>5.1 The Pan-African Vision</h3>
+            <p>While the MVP focuses on Kenya (NSE), the fragmentation problem is continental. The Unifrix
+                infrastructure is designed to scale to the Uganda Securities Exchange (USE) and Dar es Salaam Stock
+                Exchange (DSE) by Q3 2026, creating a unified East African data standard.</p>
+
+            <h3>5.2 Target Audience</h3>
+            <ul>
+                <li><strong>Institutional Investors:</strong> For back-testing risk models against historical failures.
+                </li>
+                <li><strong>Retail Investors:</strong> For due diligence and "Red Flag" analysis.</li>
+                <li><strong>Regulators & Academia:</strong> For policy research and corporate governance studies.</li>
+            </ul>
+
+            <h2>6. Conclusion</h2>
+            <p>Data without context is noise. Unifrix sells the signal. By treating the history of failed companies as a
+                valuable asset class and quantifying the impact of leadership, we are building the financial memory of
+                Africa. We believe that transparent, accessible history is the foundation of a mature, trustworthy
+                capital market.</p>
+
+            <h2>7. References</h2>
+            <ul class="reference-list">
+                <li>Brown, S. J., Goetzmann, W., Ibbotson, R. G., & Ross, S. A. (1992). Survivorship Bias in Performance
+                    Studies. The Review of Financial Studies, 5(4), 553–580.</li>
+                <li>Capital Markets Authority (CMA). (2002). Guidelines on Corporate Governance Practices by Public
+                    Listed Companies in Kenya. Nairobi: CMA.</li>
+                <li>International Monetary Fund (IMF). (2020). The Evolution of Emerging Markets: Challenges and
+                    Opportunities. Global Financial Stability Report.</li>
+                <li>World Bank. (2023). Africa’s Pulse: Leveraging Resource Wealth During the Low Carbon Transition.
+                    Washington, DC: World Bank.</li>
+                <li>Jensen, M. C., & Meckling, W. H. (1976). Theory of the Firm: Managerial Behavior, Agency Costs and
+                    Ownership Structure. Journal of Financial Economics, 3(4), 305-360. (Foundational text on Agency
+                    Theory/Governance).</li>
+            </ul>
+
+            <p style="margin-top: 4rem; text-align: center; color: var(--secondary-color); font-size: 0.8rem;">&copy;
+                2025 Unifrix Ltd. All Rights Reserved.</p>
+        </article>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
